@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>dbai weather database</title>
+    <link rel="stylesheet" type="text/css" href="pretty.css">
+  </head>
+  <body>
+    <form action="/get_data" method="get">
+      <input type="submit" value="See data"><br><br> between </input>
+      <input type="time" name="minTime"> and </input>
+      <input type="time" name="maxTime"> (optional)</input>
+    </form><br>
+    
+    <form action="/add_data" method="get"><div class="header">Add new record:</div>
+          <input type="text" name="timeString"> Time [non-optional]</input>
+      <br><input type="text" name="temp"> Temperature (*F)</input>
+      <br><input type="text" name="dewPoint"> Dew point</input>
+      <br><input type="number" name="humidity"> Humidity</input>
+      <br><input type="text" name="seaLevelPressure"> Sea-level pressure (in)</input>
+      <br><input type="number" name="visibility"> Visiblity</input>
+      <br><input type="text" name="windDirection"> Direction of wind</input>
+      <br><input type="number" name="windSpeed" min="0"> Wind speed (mph)</input>
+      <br><input type="number" name="gustSpeed" min="0"> Gust speed (mph)</input>
+      <br><input type="number" name="precipitation" min="0"> Precipication (in)</input>
+      <br><input type="text" name="events"> Events</input>
+      <br><input type="text" name="conditions"> Conditions</input>
+      <br><input type="number" name="windDirectionDegrees" min="0"> Wind direction (degrees)</input>
+      <br><input type="text" name="date"> Date [non-optional, must be unique]</input>
+      <br>
+      <br><input type="submit" value="Submit new record"></input>
+    </form>
+  </body>
+</html>
